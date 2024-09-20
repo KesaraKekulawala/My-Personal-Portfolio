@@ -6,10 +6,11 @@ import projImg2 from "../assets/img/Software project.jpg";
 import projImg3 from "../assets/img/Portfolio Project.PNG";
 import TrackVisibility from "react-on-screen";
 import 'animate.css';
+import { Gallery } from "./Gallery";
 export const Projects = () => {
     const projects = [
         {
-            title: "Gesture control robot car with mechanical arm for an entertaining game (Group)",
+            title: "Gesture Control Robot Car (Group)",
             description: "First - Year Hardware Group Project Of my university. We develop a robot car and a mechanical arm was designed for an entertaining game. Car hand were controlled by gesture hand. Arduino used to make the game",
             imgUrl: projImg1,
         },
@@ -40,13 +41,13 @@ export const Projects = () => {
                     <Tab.Container id="projects-tabs" defaultActivityKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab"  >
                     <Nav.Item>
-                        <Nav.Link eventKey="first">Tab One</Nav.Link>
+                        <Nav.Link eventKey="first">Education</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                        <Nav.Link eventKey="second">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="third">Tab Third</Nav.Link>
+                        <Nav.Link eventKey="third">Gallery</Nav.Link>
                     </Nav.Item>
                     </Nav>
                     
@@ -82,14 +83,15 @@ export const Projects = () => {
                         <Tab.Pane eventKey="third">
                         <Row>
                                 {
-                                    projects.map((project,index) =>{
-                                        return (
-                                            <ProjectCard
-                                            key={index}
-                                            {...project}
-                                            />
-                                        )
-                                    })
+                                    // projects.map((project,index) =>{
+                                    //     return (
+                                    //         <ProjectCard
+                                    //         key={index}
+                                    //         {...project}
+                                    //         />
+                                    //     )
+                                    // })
+                                    <Gallery />
                                 }
                             </Row>
                         </Tab.Pane>
